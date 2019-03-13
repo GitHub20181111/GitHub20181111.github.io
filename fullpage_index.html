@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>fullPage.js — iPhone 5C演示_dowebok</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+	.exp{ width: 200px; height: 200px; background: #eee; position: absolute; left: 50%; margin-left: -200px; top:-100px; opacity: 0 }
+  #section02.active .exp{ top:200px; opacity: 1; transition:all 1.2s ease-in-out }
+  
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+  <script type="text/javascript">
+     $(document).ready(function(){
+         $('#fullpage').fullpage({
+             navigation           :true,                             //圆点导航
+             navigationPosition   :'right',                        　//圆点导航位置left or right
+             navigationTooltips   :['第一屏','第二屏','第三屏','page4'],    　//圆点导航提示信息
+             showActiveTooltip    :true,                             //圆点导航提示信息是否显示
+             sectionsColor        :['#f00', '#f40', '#f80'],         //设置每一屏的背景色
+             anchors              :['page1','page2','page3'],        //设置锚点
+             menu                 :'menu',                          //导航
+             verticalCentered     :false,                            //设置元素是否垂直居中
+             paddingTop           :'100px',                          //设置每一屏内容的内边距
+             scrollingSpeed       :1000,                             //设置切屏速度
+         });
+  });
+ </script>
+</head>
+<body>
+<div id="fullpage"> 
+       <div class="section">
+          <div class="slide">第三屏的第一屏</div>
+          <div class="slide">第三屏的第二屏</div>
+          <div class="slide">第三屏的第三屏</div>
+          <div class="slide">第三屏的第四屏</div>
+       </div> 
+       <div class="section" id="section02">
+         <div class="exp"></div>
+       </div>
+       <div class="section">Some section</div> 
+       <div class="section">Some section</div>
+       <div class="section">Some section</div>   
+       <div class="section">Some section</div>      
+</div>
+</body>
+</html>
